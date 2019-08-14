@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* Don't touch above code ^ */
+    font-family: Roboto;
+}
+
+html, body {
+    height: 100%;
+    /* Don't touch above code ^ */
+}
+
+#container {
+    min-height: 100%;
+    /* Don't touch above code ^ */
+}
+
+#main {
+    overflow: auto;
+    padding-bottom: 100px;
+    /* Don't touch above code ^ */
+    height: 100%;
+}
+
+/* ---------------------------------------------------
+  TopNav Style
+----------------------------------------------------- */
+
+.topnav {
+    padding-top: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #4c68a1;
+    width: 84%;
+    float: right;
+}
+
+.navbar a {
+    float: right;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background: #fff;
+    color: #3b5998;
+}
+
+.dropdown-content {
+    right: 0;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background: #fff;
+    color: #3b5998;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ---------------------------------------------------
+  SideNav Style
+----------------------------------------------------- */
+
+#SideNavBar {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    width: 15%;
+    background: #3b5998;
+    color: #fff;
+}
+
+#SideNavBar h3 {
+    font-size: 1.1em;
+    text-align: center;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+#SideNavBar ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#SideNavBar ul li a {
+    display: inline-block;
+    width: 90%;
+    text-align: left;
+    padding: 5%;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color .2s;
+
+}
+
+#SideNavBar ul li a:hover {
+    background: #fff;
+    color: #3b5998;
+}
+
+/* ---------------------------------------------------
+  Footer Style
+----------------------------------------------------- */
+
+#footer {
+    position: relative;
+    height: 100px;
+    margin-top: -100px;
+    clear: both;
+    /* Don't touch above code ^ */
+    background-color: #4c68a1;
+}
+
+.footer {
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+.column ul li {
+    list-style: none;
+}
+
+.column a {
+    color: #d2d1d1;
+    text-decoration: none;
+}
+
+.column a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ---------------------------------------------------
+  Content Style
+----------------------------------------------------- */
+
+.content {
+    padding-left: 16%;
+    padding-top: 60px;
+}
