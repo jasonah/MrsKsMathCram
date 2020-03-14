@@ -1,5 +1,6 @@
 from django.db import models
 from Memberships.models import Membership
+from django.urls import reverse
 
 class Videos(models.Model):
     slug = models.SlugField()
@@ -12,6 +13,10 @@ class Videos(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('Videos:detail', kwargs={'slug': self.slug})
+
     
 
 
