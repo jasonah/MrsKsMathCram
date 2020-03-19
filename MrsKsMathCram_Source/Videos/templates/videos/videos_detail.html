@@ -5,5 +5,8 @@
 </head>
 <body>
     {{ object.title }}
+    {% for video in object.video %}
+        <a href="{{ video.get_absolute_url }}">{{ video.title }}</a>
+    {% endfor %}
 </body>
 </html>

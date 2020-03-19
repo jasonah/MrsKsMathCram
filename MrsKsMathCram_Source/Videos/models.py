@@ -17,6 +17,7 @@ class Videos(models.Model):
     def get_absolute_url(self):
         return reverse('Videos:detail', kwargs={'slug': self.slug})
 
-    
-
-
+    @property
+    def order_vids(self):
+        return self.all().order_by('position') #This should make sure all videos are in order even if we go through and delete some
+        
