@@ -4,9 +4,22 @@
     <title></title>
 </head>
 <body>
-    {{ object.title }}
+    <!-- {{ object.title }}
     {% for video in object.video %}
         <a href="{{ video.get_absolute_url }}">{{ video.title }}</a>
-    {% endfor %}
+    {% endfor %} -->
+
+    <h1>Video Detail View</h1>
+    {% if object is not None %}
+        {{ object.title }}
+        <br>
+        {{ object.description }}
+        <!-- Emplement video here later  -->
+    {% else %}
+        <h3>Please upgrade your membership to view this video</h3>
+
+    {% endif %}
+    
+
 </body>
 </html>
