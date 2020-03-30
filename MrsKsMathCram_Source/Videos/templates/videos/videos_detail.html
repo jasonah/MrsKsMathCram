@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-    <!-- {{ object.title }}
-    {% for video in object.video %}
-        <a href="{{ video.get_absolute_url }}">{{ video.title }}</a>
-    {% endfor %} -->
+{% extends 'videos/base.html' %}
+
+{% block content %}
 
     <h1>Video Detail View</h1>
     {% if object is not None %}
@@ -19,7 +12,5 @@
         <h3>Please upgrade your membership to view this video</h3>
 
     {% endif %}
-    
 
-</body>
-</html>
+{% endblock content %}
