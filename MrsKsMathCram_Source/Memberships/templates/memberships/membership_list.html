@@ -1,0 +1,27 @@
+{% extends 'videos/base.html' %}
+
+{% block content %}
+    <!-- This would be put in a container like a table -->
+    <h1>Select a Membership</h1>
+    
+    <div class="row">
+        {% for object in object_list %}
+        <div class="col">
+            <h2>{{ object.membership_type }}</h2>
+            <p>Price: ${{ object.price }}</p>
+            {% if object.membership_type != 'Trial' %}
+            <form method="POST" action="{% url 'Memberships:select' %}">
+                {% csrf_token %}
+                {% if object.membership_type != current_membership %}
+                    <button>Select</button>
+                {% else %}
+                    <small>This is your current membership</small>
+                {% endif %}
+                <input type="hidden" name="membership_type" value="{{ object.membership_type }}">
+            </form>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    
+{% endblock content %}
