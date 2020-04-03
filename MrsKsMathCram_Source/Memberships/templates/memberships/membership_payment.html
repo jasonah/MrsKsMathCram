@@ -1,0 +1,15 @@
+{% extends 'videos/base.html' %}
+
+{% block content %}
+    <div class="row">
+        <h1>Payment</h1>
+        <div class="col">
+            <p>Selected membership: {{ selected_membership }}</p>
+            <p>Price: <strong>${{ selected_membership.price }}</strong></p>
+            <!-- /////////////////////////////////////////////////
+                        STRIPE FORM GOES HERE
+            ///////////////////////////////////////////////// -->
+        </div>
+    </div>
+    
+{% endblock content %}
