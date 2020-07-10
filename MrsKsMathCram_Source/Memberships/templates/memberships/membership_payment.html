@@ -8,7 +8,15 @@
             <p>Price: <strong>${{ selected_membership.price }}</strong></p>
             <!-- /////////////////////////////////////////////////
                         STRIPE FORM GOES HERE
+
+            
             ///////////////////////////////////////////////// -->
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="{{ publishkey }}"
+                data-description="Mrs. K's Math Cram"
+                data-amount="{{ selected_membership.price }}00"
+                data-locale="auto">
+            </script>
         </div>
     </div>
     

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from .models import Membership, UserMembership, Subscription
 from django.contrib import messages
@@ -26,6 +26,15 @@ def get_selected_membership(request):
     if selected_membership_qs.exists():
         return selected_membership_qs.first()
     return None
+
+def profile_view(request):
+    user_membership = get_user_membership(request)
+    user_subscription = get_user_subscription(request)
+    context = {
+        'user_membership': user_membership,
+        'user_subscription': user_subscription
+    }
+    return render(request, "memberships/profile.html", context)
 
 class MembershipSelectView(ListView):
     model = Membership
@@ -58,8 +67,71 @@ def PaymentView(request):
     user_membership = get_user_membership(request)
     selected_membership = get_selected_membership(request)
     publishkey = settings.STRIPE_PUBLISHABLE_KEY
+
+    if request.method == "POST":
+        try:
+            token = request.POST['stripeToken'] #This will most likely have to be changed
+            subscription = stripe.Subscription.create(
+                customer=user_membership.stripe_customer_id,
+                items=[
+                    {
+                        "plan": selected_membership.stripe_plan_id,
+                    },
+                ],
+                source=token
+            )
+
+            return redirect(reverse('memberships:update-transactions', kwargs={
+                'subscription_id': subscription.id
+            }))
+
+        except stripe.CardError as e:
+            messages.info(request, "This payment has not gone through. Please contact support.")
+
+
     context = {
         'publishkey': publishkey,
         'selected_membership': selected_membership,
         }
     return render(request, "memberships/membership_payment.html", context)
+
+def UpdateTransactions(request, subscription_id):
+    user_membership = get_user_membership(request)
+    selected_membership = get_selected_membership(request)
+    user_membership.Membership = selected_membership
+    user_membership.save()
+
+    sub, created = Subscription.objects.get_or_create(user_membership=user_membership)
+    sub.stripe_subscription_id = subscription_id
+    sub.active = True
+    sub.save()
+
+    try:
+        del request.session['selected_membership_type']
+    except:
+        pass
+
+    messages.info(request, "Successfully created {} membership".format(selected_membership))
+    return redirect('/videos')
+
+def cancelSubscription(request):
+    user_sub = get_user_subscription(request)
+    if user_sub.active == False:
+        messages.info(request, "You don't have an active membership.")
+        return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    
+    sub = stripe.Subscription.retrieve(user_sub.stripe_subscription_id)
+    sub.delete()
+
+    user_sub.active = False
+    user_sub.save()
+
+    free_membership = Membership.objects.filter(membersip_type='trial').first()
+    user_membership = get_user_membership(request)
+    user_membership.membership = free_membership
+    user_membership.save()
+
+    messages.info(request, "Successfully cancelled membership")
+    # Write something to send them a cancelled membership email
+
+    return redirect('/memberships')
