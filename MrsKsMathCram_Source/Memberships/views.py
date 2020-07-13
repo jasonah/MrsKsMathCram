@@ -126,7 +126,7 @@ def cancelSubscription(request):
     user_sub.active = False
     user_sub.save()
 
-    free_membership = Membership.objects.filter(membersip_type='trial').first()
+    free_membership = Membership.objects.filter(membership_type='trial').first()
     user_membership = get_user_membership(request)
     user_membership.membership = free_membership
     user_membership.save()
