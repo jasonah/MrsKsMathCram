@@ -6,6 +6,7 @@
         <h1>My Profile</h1>
         <div class="col-sm-4 col-md-4">
             {% if user_subscription != None %}
+                <h2>Welcome {{ user }} </h2>
                 <h4>Current Membership: {{ user_membership.membership.membership_type }} <small>since {{ user_subscription.get_created_date }}</small></h4>
                 {% if user_subscription.active != False %}
                     <p>Next payment due: {{ user_subscription.get_next_billing_date }}</p>

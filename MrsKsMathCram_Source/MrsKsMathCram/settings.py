@@ -49,6 +49,7 @@ SITE_ID = 1
 
 ACCOUNT_EMAIL_REQUIRED = True
 LOGIN_REDIRECT_URL = '/memberships/profile/'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
