@@ -4,7 +4,7 @@
 
     <h1>Videos List View Page</h1>
     {% for object in object_list %}
-        <a href="{{ object.get_absolute_url }}">{{ object }}</a>
+        <a href="{{ object.get_absolute_url }}">{{ object.title }} <img src="{{ object.thumbnail.url }}" alt="{{ object.title  }}" style="width:250px;height:250px";/> </a>
         
     {% endfor %}
 
