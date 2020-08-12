@@ -5,8 +5,12 @@
     <h1>Video Detail View</h1>
     {% if object is not None %}
         {{ object.title }}
+        <br>
         <!-- Just a test here for now  -->
-        <iframe src="https://player.vimeo.com/video/439082492" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <!-- {{ object.video_url }} -->
+        <!-- {{ object.video_id }} -->
+        
+        <iframe src="https://player.vimeo.com/video/{{ object.video_id }}" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         <br>
         {{ object.description }}
         <!-- Emplement video here later  -->
