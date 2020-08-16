@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<head>
+    <!-- basic.html -->
+    <title>Mrs K's Math Cram</title>
+    <meta charset = "UTF-8" />
+</head>
+<body>
+    <H1>Hello</H1>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if messages.tags %} class="{{ messages.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form action="{% url 'subscribe' %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="email" id="email" name="email" placeholder="Type your email address">
+    </form>
+    <p>If you are having trouble subscribing, or have any questions, please email us at support@mrsksmathcram.com</p>
+</body>
+</html>

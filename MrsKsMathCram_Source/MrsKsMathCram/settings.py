@@ -43,11 +43,13 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'Memberships',
     'Videos',
+    'stripe',
 ]
 
 SITE_ID = 1
 
 ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 LOGIN_REDIRECT_URL = '/memberships/profile/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
