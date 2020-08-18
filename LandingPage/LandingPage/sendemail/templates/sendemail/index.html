@@ -6,7 +6,6 @@
     <meta charset = "UTF-8" />
 </head>
 <body>
-    <H1>Hello</H1>
     {% if messages %}
         <ul class="messages">
             {% for message in messages %}
@@ -19,6 +18,6 @@
         {{ form }}
         <input type="email" id="email" name="email" placeholder="Type your email address">
     </form>
-    <p>If you are having trouble subscribing, or have any questions, please email us at support@mrsksmathcram.com</p>
+    <p>If you are having trouble subscribing, or have any questions, please email us at <a href="mailto:support@mrsksmathcram.com">support@mrsksmathcram.com</a></p>
 </body>
 </html>
