@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    {% load static %}
+
     <title>Mrs K's Math Cram</title>
     
 </head>
@@ -46,7 +48,7 @@
     <div class="jumbotron jumbotron-fluid "  style="background-color: #5f7ec1;">
         <div class="container">
         <div class="text-center">
-            <img src="../img/mathcramtitletransparent.PNG" class="img-fluid" alt="mrsksmathcram">
+            <img src="{% static 'sendemail/images/mathcramtitletransparent.png' %}" class="img-fluid" alt="mrsksmathcram">
           <!-- <h1 class="display-4">Mrs K's Math Cram</h1> -->
           <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
         {% if messages %}
