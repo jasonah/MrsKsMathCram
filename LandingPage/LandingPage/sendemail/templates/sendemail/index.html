@@ -7,10 +7,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
     {% load static %}
+    <link rel="stylesheet" href="{% static 'sendemail/style/stylesheet.css' %}">
 
     <title>Mrs K's Math Cram</title>
     
@@ -130,10 +131,23 @@
     <div class="container-fluid padding" style="background-color: #f7f7f7;">
       <div class="laptop-body">
         <div class="row">
-          <div class="col-md-7">
+          <div class="col-md-3 text-center align-self-center">
             <ul class="fa-ul">
               <li>
-                <i class="fas fa-play"></i>
+                <i class="fas fa-play fa-5x"></i>
+              </li>
+              <li>
+                <i class="fas fa-brain fa-5x"></i>
+              </li>
+              <li>
+                <i class="fas fa-book fa-5x"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="fa-ul">
+              <li>
+                <!-- <i class="fas fa-play"></i> -->
                 <h3>New Videos Every Week</h3>
                 <p>Hours of educational content with more uploaded every week</p>
                 <p>Covering every area of math you need to know for the ACT / SAT</p>
@@ -141,14 +155,14 @@
                 <p>Multiple problem videos as well as bite size focused content</p>
               </li>
               <li>
-                <i class="fas fa-brain"></i>
+                <!-- <i class="fas fa-brain"></i> -->
                 <h3>Whether cramming for the ACT or needing supplemental help we've got you covered</h3>
                 <p>Tips and tricks for every level of highschool math</p>
                 <p>New ways to memorize formulas and how to apply them</p>
                 <p>Increasing your longterm understanding of math as well as getting you caught up to speed quickly</p>
               </li>
               <li>
-                <i class="fas fa-book"></i>
+                <!-- <i class="fas fa-book"></i> -->
                 <h3>Downloadable worksheets</h3>
                 <p>Supplemental worksheets to help exactly with an area of weakness</p>
                 <p>Formula sheets for quick reminders and cram sessions</p>
@@ -156,7 +170,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-5 text-center align-self-center">
+          <div class="col-md-3 text-center align-self-center">
             <i class="fas fa-laptop fa-10x"></i>
           </div>
         </div>    

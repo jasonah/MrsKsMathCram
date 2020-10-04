@@ -119,9 +119,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/sendemail/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
 
-MAILCHIMP_API_KEY = 'adecf521896c2a9e9f88b99a13898d34-us17'
+MAILCHIMP_API_KEY = '6583968b8ee4bf7bd31b634723b85f66-us17'
 MAILCHIMP_DATA_CENTER = 'us17'
 MAILCHIMP_EMAIL_AUDIENCE_ID = '3d9148092f'
