@@ -9,20 +9,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- <link rel="stylesheet" type="text/css" href="stylesheet.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'sendemail/style/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'sendemail/style/stylesheet.css' %}" type="text/css">
 
     <title>Mrs K's Math Cram</title>
     
-</head>
-<body>  
+</head >
+<body style="font-family: 'Open Sans', sans-serif;">  
     <div class="jumbotron jumbotron-fluid "  style="background-color: #3B5998;">
         <div class="container">
         <div class="text-center">
              <style>img {filter: invert(100%);}</style>
             <img src="{% static 'sendemail/images/mathcramtitletransparent.png' %}" class="img-fluid" alt="mrsksmathcram">
-          <!-- <h1 class="display-4">Mrs K's Math Cram</h1> -->
           <p class="lead" style="color: #ffffff">Your go-to resource for increasing math scores</p>
           <br>
         {% if messages %}
@@ -51,10 +51,10 @@
     
     <div class="col-xl-8 mx-auto">
       <div class="m-3 card">
-        <div class="card-header text-center" style="background-color: #4f71ba;">
-          <h1 style="color: #ffffff;">What is Mrs. K's Math Cram?</h1>
+        <div class="card-header text-center" style="background-color: #3B5998;">
+          <h1 style="color: #ffffff;font-family: 'Roboto', sans-serif;">What is Mrs. K's Math Cram?</h1>
         </div>
-        <div class="pl-2 bg-light card-block">
+        <div class="px-4 bg-light card-block">
           <br>
           <p class="card-text">We provide an ever-growing collection of Cram videos and worksheets to help you excel on your upcoming ACT or SAT.</p>
           <p class="card-text">We are dedicated to providing you with a full understanding of the world of math from junior high through early college.</p>
@@ -62,8 +62,8 @@
           <p class="card-text">Using methods she has spent decades refining, Mrs. K provides you with the ability to recognize and provide direct solutions to those tricky math problems.</p>
           <br>
         </div>
-        <ul class="list-group list-group-flush">
-          <h2 class="list-group-item border-0 bg-light">Our MathCram Videos:</h2>
+        <ul class="px-4 list-group list-group-flush border-0 bg-light">
+          <h2 class="list-group-item border-0 bg-light" style="font-family: 'Roboto', sans-serif;">Our MathCram Videos:</h2>
           <li class="list-group-item border-0 bg-light"><i class="fas fa-check" style="color: #3B5998;"></i> Average 15 minutes long</li>
           <li class="list-group-item border-0 bg-light"><i class="fas fa-check" style="color: #3B5998;"></i> Each provide 8 hand-crafted problems and direct solutions</li>
           <li class="list-group-item border-0 bg-light"><i class="fas fa-check" style="color: #3B5998;"></i> Give helpful tips and tricks to make the problems easier</li>
@@ -76,9 +76,9 @@
     <div class="col-xl-8 mx-auto">
       <div class="m-3 card">
         <div class="card-header text-center" style="background-color: #3B5998;">
-          <h1 style="color: #ffffff;">But that's not all!</h1>
+          <h1 style="color: #ffffff;font-family: 'Roboto', sans-serif;">But that's not all!</h1>
         </div>
-        <div class="pl-2 bg-light card-block">
+        <div class="px-4 bg-light card-block">
           <br>
           <p class="card-text">Alongside the MathCram videos, we have a growing collection of condensed videos giving you a streamlined look into solving specific problems that are sure to come up</p>
           <p class="card-text">These 3 to 5 minute videos are specific to one topic</p>
@@ -92,9 +92,9 @@
     <div class="col-xl-8 mx-auto">
       <div class="m-3 card">
         <div class="card-header text-center" style="background-color: #3B5998;">
-          <h1 style="color: #ffffff;">And there's even more!</h1>
+          <h1 style="color: #ffffff;font-family: 'Roboto', sans-serif;">And there's even more!</h1>
         </div>
-        <div class="pl-2 bg-light card-block">
+        <div class="px-4 bg-light card-block">
           <br>
           <p class="card-text">Mrs K. also provides printable handouts that you can use to reference specific principles and formulas</p>
           <p class="card-text">These are handouts she has made over decades of teaching </p>
@@ -108,9 +108,9 @@
     <div class="col-xl-8 mx-auto">
       <div class="m-3 card">
         <div class="card-header text-center" style="background-color: #3B5998;">
-          <h1 style="color: #ffffff;">Who is this website for?</h1>
+          <h1 style="color: #ffffff;font-family: 'Roboto', sans-serif;">Who is this website for?</h1>
         </div>
-        <div class="pl-2 bg-light card-block">
+        <div class="px-4 bg-light card-block">
           <br>
           <p class="card-text">Everyone!</p>
           <p class="card-text">This site is designed to give you the upper hand when it comes to math, from just entering highschool, to going off to college</p>
@@ -128,9 +128,9 @@
     <div class="col-xl-8 mx-auto">
       <div class="m-3 card">
         <div class="card-header text-center" style="background-color: #3B5998;">
-          <h1 style="color: #ffffff;">Tutors can cost upwards of a hundred dollars per hour, how much will this be?</h1>
+          <h1 style="color: #ffffff;font-family: 'Roboto', sans-serif;">Tutors can cost upwards of a hundred dollars per hour, how much will this be?</h1>
         </div>
-        <div class="pl-2 bg-light card-block">
+        <div class="px-4 bg-light card-block">
           <br>
           <p class="card-text">Mrs K's Math Cram will be about the same price of your favorite streaming service, $12.99 / month</p>
           <p class="card-text">But, just by entering your email, you will recieve a coupon when we go to launch this site</p>
@@ -143,14 +143,14 @@
     <div class="col-xl-8 mx-auto">
       <div class="m-3 card">
         <div class="card-header text-center" style="background-color: #3B5998;">
-          <h1 style="color: #ffffff;">Meet Mrs. K</h1>
+          <h1 style="color: #ffffff;font-family: 'Roboto', sans-serif;">Meet Mrs. K</h1>
         </div>
         <div class="card-block bg-light">
           <div class="row">
             <div class="col-md-5 text-center align-self-center">
               <i class="fas fa-chalkboard-teacher fa-10x" style="font-size:350px"></i>
             </div>
-            <div class="pl-4 pr-4 col-md-7">
+            <div class="px-4 pr-4 col-md-7">
               <br>
               <p>My name is Suzy Kruckenberg, commonly known as Mrs. K.  This year marks my 32nd year as a high school math teacher.  During my career, I have taught 7th-grade math through pre-calculus. In addition to teaching high school, I also have ten years’ experience as an instructor of the 00 level and 0 level college math classes, as well as college algebra.  I was fortunate to be a part of a team that led professional development math workshops for middle school math teachers across the state.  Our focus was to prepare these teachers to take the Middle School Math certification test.  I have been a member of several State Department of Education committees where we determined the four levels of achievement for the state assessments and also reviewed the questions for the geometry and algebra state assessments.</p>
               <p>Working as a personal tutor has been one of my most rewarding experiences. Conversing one on one with a student has helped me understand how teenagers think about problems.  Because of these conversations, I have learned how to explain math at their level. Many times, I can predict an error a student might make before they get very far in a problem.  My lessons incorporate this knowledge, warning students of possible mistakes before they even have a chance to make them.</p>
@@ -177,14 +177,14 @@
 
     <div class="m-3 card">
       <div class="card-header" style="background-color: #3B5998;">
-        <h1 style="color: #ffffff;">Meet Mrs. K</h1>
+        <h1 style="color: #ffffff;font-family: 'Roboto', sans-serif;">Meet Mrs. K</h1>
       </div>
       <div class="card-block">
         <div class="row">
           <div class="col-md-5 text-center align-self-center">
             <i class="fas fa-chalkboard-teacher fa-10x"></i>
           </div>
-          <div class="pl-4 pr-4 col-md-7">
+          <div class="px-4 pr-4 col-md-7">
             <br>
             <p>My name is Suzy Kruckenberg, commonly known as Mrs. K.  This year marks my 32nd year as a high school math teacher.  During my career, I have taught 7th-grade math through pre-calculus. In addition to teaching high school, I also have ten years’ experience as an instructor of the 00 level and 0 level college math classes, as well as college algebra.  I was fortunate to be a part of a team that led professional development math workshops for middle school math teachers across the state.  Our focus was to prepare these teachers to take the Middle School Math certification test.  I have been a member of several State Department of Education committees where we determined the four levels of achievement for the state assessments and also reviewed the questions for the geometry and algebra state assessments.</p>
             <p>Working as a personal tutor has been one of my most rewarding experiences. Conversing one on one with a student has helped me understand how teenagers think about problems.  Because of these conversations, I have learned how to explain math at their level. Many times, I can predict an error a student might make before they get very far in a problem.  My lessons incorporate this knowledge, warning students of possible mistakes before they even have a chance to make them.</p>
@@ -198,7 +198,7 @@
     <div class="row text-center padding">
         <div class="col-xs-12 col-sm-6">
             <i class="fas fa-video fa-3x"></i>
-            <h3>Educational Videos</h3>
+            <h3 style="font-family: 'Roboto', sans-serif;">Educational Videos</h3>
             <ul class="fa-ul">
               <li><i class="fas fa-check"></i>Algebra</li>
               <li><i class="fas fa-check"></i>Geometry</li>
@@ -208,7 +208,7 @@
         </div>
         <div class="col-xs-12 col-sm-6">
             <i class="fas fa-copy fa-3x"></i>
-            <h3>Printable Worksheets</h3>
+            <h3 style="font-family: 'Roboto', sans-serif;">Printable Worksheets</h3>
             <ul class="fa-ul">
               <li><i class="fas fa-check-circle"></i>Fraction rules</li>
               <li><i class="fas fa-check-circle"></i>Systems of equations</li>
@@ -227,7 +227,7 @@
             <i class="fas fa-play fa-5x" style="color: #3B5998;"></i>
           </td>
           <td>
-            <h3>New Videos Every Week</h3>
+            <h3 style="font-family: 'Roboto', sans-serif;">New Videos Every Week</h3>
             <p>Hours of educational content with more uploaded every week</p>
             <p>Covering every area of math you need to know for the ACT / SAT</p>
             <p>Tried and true methods with decades of refining to help you score the best that you can</p>
@@ -240,7 +240,7 @@
             <i class="fas fa-book fa-5x" style="color: #3B5998;"></i>
           </td>
           <td>
-            <h3>Downloadable worksheets</h3>
+            <h3 style="font-family: 'Roboto', sans-serif;">Downloadable worksheets</h3>
               <p>Supplemental worksheets to help exactly with an area of weakness</p>
               <p>Formula sheets for quick reminders and cram sessions</p>
               <p>Memorization techniques for formulas and how to apply them</p>
@@ -252,7 +252,7 @@
             <i class="fas fa-brain fa-5x" style="color: #3B5998;"></i>
           </td>
           <td>
-            <h3>Whether cramming for the ACT or needing supplemental help we've got you covered</h3>
+            <h3 style="font-family: 'Roboto', sans-serif;">Whether cramming for the ACT or needing supplemental help we've got you covered</h3>
               <p>Tips and tricks for every level of highschool math</p>
               <p>New ways to memorize formulas and how to apply them</p>
               <p>Increasing your longterm understanding of math as well as getting you caught up to speed quickly</p>
