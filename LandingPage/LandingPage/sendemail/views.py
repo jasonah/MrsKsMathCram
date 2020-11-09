@@ -41,7 +41,7 @@ def email_list_signup(request):
                 messages.info(request, "You are already signed up, Thanks!")
             else:
                 subscribe(form.instance.email)
-                messages.success(request, "Thank you for signing up. You will be emailed shortly!")
+                messages.success(request, "Thank you for signing up. You will be emailed shortly! If the email does not show up in your inbox, please check \"spam\" or \"promotions\".")
                 form.save()
     return HttpResponseRedirect(request.META.get("HTTP_REFERER"))
 
