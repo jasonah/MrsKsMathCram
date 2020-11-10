@@ -281,11 +281,13 @@
       </div>
     </div>
 
-    <div class="mw-100 container">
-      <div class="text-center" style="background-color: #3B5998;">
+    <div class="jumbotron jumbotron-fluid "  style="background-color: #3B5998;">
+      <div class="container">
+      <div class="text-center">
         <div class="p-5">
           <h1 style="color: #ffffff;font-family: 'Roboto', sans-serif; font-weight: bold;">What are you waiting for? Enter your email below!</h1>
         </div>
+        <br>
       {% if messages %}
         <ul class="messages">
             {% for message in messages %}
@@ -296,19 +298,20 @@
     <form action="{% url 'subscribe' %}" method="POST">
         {% csrf_token %}
         {{ form }}
-          <div class="w-50 form-group">
-            <!-- <label for="exampleInputEmail1">Email address</label> -->
-            <input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter your email address">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
+        <div class="form-group">
+          <!-- <label for="exampleInputEmail1">Email address</label> -->
+          <input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter your email address">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
         <button type="submit" class="btn btn-primary" style="background-color: #334D84">Sign Up!</button>
     </form>
         <br>
         <p style="color: #ffffff"><small>Enter your email to be notified about when the website will be launching.</small></p>
         <p style="color: #ffffff"><small>We'll keep you up to date on our progress and send a coupon code curated especially for you to use when signing up.</small></p>
-        <br>
       </div>
-    </div>
+      </div>
+  </div>
+
 
     <div class="col-xl-8 mx-auto">
       <div class="m-3 card">
