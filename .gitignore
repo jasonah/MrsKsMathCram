@@ -105,3 +105,6 @@ venv.bak/
 
 #config
 .config
+
+#settings
+settings.py
