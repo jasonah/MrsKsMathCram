@@ -108,3 +108,4 @@ venv.bak/
 
 #settings
 settings.py
+models.py
