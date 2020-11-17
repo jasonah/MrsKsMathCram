@@ -3,7 +3,7 @@ from django.conf import settings
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .forms import EmailSignupForm
-from .models import Signup
+from .models import Signup, Videos
 import json
 import requests
 
@@ -57,3 +57,6 @@ def index(request):
         'form': form,
     }
     return render(request, 'index.html', context)
+
+class VideosDetailView(Videos):
+    model = Videos
